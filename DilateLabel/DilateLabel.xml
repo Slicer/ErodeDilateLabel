@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<executable>
+  <category>Filtering</category>
+  <index>3</index>
+  <title>Dilate Label Map</title>
+  <description>
+    Calculate pixel-based or physical distance map.
+  </description>
+  <version>0.1.0.$Revision: 1.1 $(alpha)</version>
+  <documentation-url>http://https://github.com/tokjun/DilateLabel</documentation-url>
+  <license></license>
+  <contributor>Junichi Tokuda</contributor>
+  <acknowledgements>
+    This work is part of NIH 5R01CA138586 -- A NEW METHOD FOR IMPROVED TARGETING IN IMAGE-GUIDED ABDOMINAL INTERVENTIONS (PI: Nobuhiko Hata)
+  </acknowledgements>
+
+  <parameters>
+    <label>IO</label>
+    <description>Input/output parameters</description>
+    <image type="label">
+      <name>inputVolume</name>
+      <label>Input Volume</label>
+      <channel>input</channel>
+      <index>0</index>
+      <description>Input label data</description>
+    </image>
+    <image type="label">
+      <name>outputVolume</name>
+      <label>Output Volume</label>
+      <channel>output</channel>
+      <index>1</index>
+      <description>Distance map volume</description>
+    </image>
+    <integer>
+      <name>label</name>
+      <longflag>label</longflag>
+      <description>Dilate label (label for the area to be dilated). </description>
+      <label>Dilate label</label>
+      <default>1</default>
+    </integer>
+    <integer>
+      <name>radius</name>
+      <longflag>radius</longflag>
+      <description>Radius for dilation..</description>
+      <label>Dilation Radius</label>
+      <default>1</default>
+    </integer>
+  </parameters>
+</executable>

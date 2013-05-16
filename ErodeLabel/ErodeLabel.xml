@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<executable>
+  <category>Filtering</category>
+  <index>3</index>
+  <title>Erode Label Map</title>
+  <description>
+    Calculate pixel-based or physical distance map.
+  </description>
+  <version>0.1.0.$Revision: 1.1 $(alpha)</version>
+  <documentation-url>http://https://github.com/tokjun/ErodeLabel</documentation-url>
+  <license></license>
+  <contributor>Junichi Tokuda</contributor>
+  <acknowledgements>
+    This work is part of NIH 5R01CA138586 -- A NEW METHOD FOR IMPROVED TARGETING IN IMAGE-GUIDED ABDOMINAL INTERVENTIONS (PI: Nobuhiko Hata)
+  </acknowledgements>
+
+  <parameters>
+    <label>IO</label>
+    <description>Input/output parameters</description>
+    <image type="label">
+      <name>inputVolume</name>
+      <label>Input Volume</label>
+      <channel>input</channel>
+      <index>0</index>
+      <description>Input label data</description>
+    </image>
+    <image type="label">
+      <name>outputVolume</name>
+      <label>Output Volume</label>
+      <channel>output</channel>
+      <index>1</index>
+      <description>Distance map volume</description>
+    </image>
+    <integer>
+      <name>label</name>
+      <longflag>label</longflag>
+      <description>Erode label (label for the area to be eroded). </description>
+      <label>Erode label</label>
+      <default>1</default>
+    </integer>
+    <integer>
+      <name>radius</name>
+      <longflag>radius</longflag>
+      <description>Radius for Erosion.</description>
+      <label>Erosion Radius</label>
+      <default>1</default>
+    </integer>
+  </parameters>
+</executable>
