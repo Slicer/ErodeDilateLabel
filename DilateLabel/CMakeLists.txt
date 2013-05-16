@@ -1,23 +1,24 @@
-cmake_minimum_required(VERSION 2.8.7)
-
+#-----------------------------------------------------------------------------
 set(MODULE_NAME DilateLabel)
 
 #-----------------------------------------------------------------------------
-if(NOT Slicer_SOURCE_DIR)
-  find_package(Slicer REQUIRED)
-  include(${Slicer_USE_FILE})
-endif()
+set(MODULE_INCLUDE_DIRECTORIES
+  )
+
+set(MODULE_SRCS
+  )
+
+set(MODULE_TARGET_LIBRARIES
+  ${ITK_LIBRARIES}
+  )
 
 #-----------------------------------------------------------------------------
 SEMMacroBuildCLI(
   NAME ${MODULE_NAME}
-  LOGO_HEADER ${Slicer_SOURCE_DIR}/Resources/NAMICLogo.h
-  TARGET_LIBRARIES ModuleDescriptionParser ${ITK_LIBRARIES}
-  LINK_DIRECTORIES ${ModuleDescriptionParser_BINARY_DIR}
-  INCLUDE_DIRECTORIES
-    ${SlicerBaseCLI_SOURCE_DIR} ${SlicerBaseCLI_BINARY_DIR}
+  TARGET_LIBRARIES ${MODULE_TARGET_LIBRARIES}
+  INCLUDE_DIRECTORIES ${MODULE_INCLUDE_DIRECTORIES}
+  ADDITIONAL_SRCS ${MODULE_SRCS}
   )
-
 
 #-----------------------------------------------------------------------------
 #if(BUILD_TESTING)
