@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <executable>
-  <category>Filtering</category>
+  <category>Filtering.Morphology</category>
   <index>3</index>
   <title>Erode Label Map</title>
   <description>
     Calculate pixel-based or physical distance map.
   </description>
   <version>0.1.0.$Revision: 1.1 $(alpha)</version>
-  <documentation-url>http://https://github.com/tokjun/ErodeLabel</documentation-url>
+  <documentation-url>http://wiki.slicer.org/slicerWiki/index.php/Documentation/Nightly/Extensions/ErodeDilateLabel</documentation-url>
   <license></license>
   <contributor>Junichi Tokuda</contributor>
   <acknowledgements>
