@@ -32,8 +32,6 @@
 #include "itkPluginUtilities.h"
 #include "ErodeLabelCLP.h"
 
-#include "itkMultiplyByConstantImageFilter.h"
-
 namespace {
 
 template<class T> int DoIt( int argc, char * argv[], T )
